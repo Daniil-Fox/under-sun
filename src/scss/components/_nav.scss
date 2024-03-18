@@ -11,6 +11,7 @@
     font-weight: 500;
     font-size: 18px;
     color: #000;
+    transition: color .3s ease-out;
 
     &::before {
       content: "";
