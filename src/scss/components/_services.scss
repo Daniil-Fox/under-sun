@@ -1,0 +1,24 @@
+.services {
+  padding-top: 90px;
+  padding-bottom: 60px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -200px;
+    width: 290px;
+    height: 410px;
+    background-image: url('./../img/leafs/04.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+  }
+}

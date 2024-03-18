@@ -1,0 +1,62 @@
+.work {
+  padding: 60px 0;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    font-size: 18px;
+
+    a {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: #d37100;
+    }
+  }
+
+  &__slider {
+    margin-bottom: 40px;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  &__btn {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__pagination {
+    position: static;
+    width: auto;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    color: #505050;
+
+    pointer-events: none;
+    user-select: none;
+  }
+}

@@ -1,0 +1,79 @@
+.about {
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 10;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -300px;
+    width: 380px;
+    height: 590px;
+    background-image: url('./../img/leafs/03.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__images {
+    height: 500px;
+    padding-bottom: 58px;
+    padding-right: 30px;
+    position: relative;
+  }
+
+  &__desc {
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    position: relative;
+
+    &--big {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      border-radius: 80px 0 0 0;
+      overflow: hidden;
+      padding-right: 90px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 00px;
+        width: 206px;
+        height: 250px;
+        border-radius: 85px 0 70px 0;
+        background-color: #f9f3de;
+      }
+    }
+
+    &--small {
+      position: absolute;
+      height: 290px;
+      max-width: 209px;
+      right: 0;
+      bottom: 0;
+      border-radius: 70px 0;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}

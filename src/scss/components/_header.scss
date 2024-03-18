@@ -1,0 +1,22 @@
+.header {
+  padding: 25px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__tel {
+    font-family: var(--second-family);
+    font-weight: 250;
+    font-size: 45px;
+    text-align: right;
+    color: #505050;
+    transition: color .3s ease-out;
+
+    @include hover {
+      color: #f39f3d;
+    }
+  }
+}

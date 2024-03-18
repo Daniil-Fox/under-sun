@@ -1,0 +1,23 @@
+.address {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+  }
+
+  &__desc {
+    display: block;
+    margin: 0;
+    font-weight: 300;
+    font-size: 20px;
+    color: #000;
+  }
+}

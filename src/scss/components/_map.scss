@@ -1,0 +1,40 @@
+.map {
+  min-height: 600px;
+
+  position: relative;
+  background-image: url('./../img/map-plug.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__map {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 25px;
+
+    &::before {
+      background: none;
+      left: calc(100% + 30px);
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 200px;
+      height: 2px;
+      background-color: #f39f3d;
+    }
+  }
+
+  &__content {
+    padding: 50px 40px 60px;
+    background-color: #fff;
+    border-radius: 0 150px 0 0;
+    width: 100%;
+    max-width: 530px;
+  }
+}

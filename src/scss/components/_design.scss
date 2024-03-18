@@ -1,0 +1,126 @@
+.design {
+  margin-bottom: 120px;
+  padding-top: 60px;
+  position: relative;
+
+  &__line {
+    position: absolute;
+    width: 120%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(14deg);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 290px;
+    height: 360px;
+    background-image: url('./../img/leafs/05.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    font-size: 18px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+}
+
+.design-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__image {
+    height: 410px;
+    margin-bottom: 65px;
+    border-radius: 0 0 100px 0;
+    overflow: hidden;
+    display: inline-block;
+
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+
+    &--bottom {
+      height: 440px;
+      margin-bottom: 0;
+      border-radius: 80px 0 0 0;
+      align-self: flex-end;
+    }
+  }
+}
+
+
+.design-right {
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__image {
+    overflow: hidden;
+
+    &--big {
+      width: 100%;
+      height: 650px;
+      border-radius: 150px 0 0 0;
+      margin-bottom: 96px;
+    }
+
+    &--small {
+      height: 480px;
+      align-self: flex-end;
+      margin-bottom: 87px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding-left: 112px;
+
+  }
+
+  &__title {
+    margin-bottom: 33px;
+
+    &::before {
+      display: none;
+    }
+  }
+}

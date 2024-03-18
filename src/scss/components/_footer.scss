@@ -1,0 +1,20 @@
+.footer {
+  padding: 20px 0;
+  background-color: #f39f3d;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__link {
+    font-weight: 300;
+    font-size: 16px;
+    color: #000;
+
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+}

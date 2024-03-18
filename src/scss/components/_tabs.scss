@@ -1,0 +1,77 @@
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 67px;
+
+  &__buttons {
+    grid-column: 3 span;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__content {
+    grid-column: 6 span;
+  }
+
+  &__btn {
+
+    font-weight: 500;
+    font-size: 25px;
+    color: #000;
+    position: relative;
+    transition: opacity .6s linear, color .3s ease-out, transform .6s ease-out !important;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(100% + 44px);
+      top: 50%;
+      transform: translateY(-50%);
+      height: 2px;
+      width: 0;
+      background-color: #f39f3d;
+
+      transition: width .3s ease-out;
+      will-change: width;
+    }
+
+    &.active {
+      color: #f39f3d;
+
+      &::after {
+        width: 150px;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 45px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 60px;
+    }
+
+    @include hover {
+      color: #f39f3d;
+    }
+  }
+
+  &__image {
+    border-radius: 80px 0 0 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__pricelist {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
