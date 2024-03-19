@@ -3,6 +3,18 @@
   position: relative;
   z-index: 10;
 
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @include tablet {
+      margin-left: 30px;
+    }
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -20,6 +32,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
   }
 
   &__images {
@@ -27,6 +44,13 @@
     padding-bottom: 58px;
     padding-right: 30px;
     position: relative;
+
+    @include small-tablet {
+      height: auto;
+      order: 1;
+      max-width: 80%;
+      margin: 0 auto;
+    }
   }
 
   &__desc {

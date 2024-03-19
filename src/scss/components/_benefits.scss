@@ -6,6 +6,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__line {
@@ -31,7 +36,19 @@
 
     padding-left: 210px;
     padding-bottom: 150px;
+    height: 585px;
 
+    @include tablet {
+      padding-left: 150px;
+      padding-bottom: 75px;
+      height: 500px;
+    }
+
+    @include small-tablet {
+      height: auto;
+      max-width: 80%;
+      margin: 0 auto;
+    }
   }
 
   &__img {
@@ -52,6 +69,10 @@
       bottom: 0;
       max-width: 307px;
       height: 384px;
+
+      @include tablet {
+        height: 320px;
+      }
 
       img {
         border-radius: 200px 200px 0 0;

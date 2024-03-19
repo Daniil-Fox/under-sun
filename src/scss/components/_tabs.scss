@@ -3,15 +3,44 @@
   grid-template-columns: repeat(9, 1fr);
   gap: 67px;
 
+  @include small-tablet {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include small-tablet {
+      flex-direction: row;
+      gap: 30px;
+
+    }
+  }
+
   &__buttons {
     grid-column: 3 span;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include small-tablet {
+      grid-column: 1 span;
+
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__content {
     grid-column: 6 span;
+
+    @include small-tablet {
+      grid-column: 1 span;
+    }
   }
 
   &__btn {
@@ -21,6 +50,14 @@
     color: #000;
     position: relative;
     transition: opacity .6s linear, color .3s ease-out, transform .6s ease-out !important;
+
+    @include tablet {
+      font-size: 22px;
+    }
+
+    @include small-tablet {
+      font-size: 18px;
+    }
 
     &::after {
       content: "";
@@ -34,6 +71,17 @@
 
       transition: width .3s ease-out;
       will-change: width;
+
+      @include tablet {
+        left: calc(100% + 10px);
+      }
+
+      @include small-tablet {
+        top: unset;
+        transform: unset;
+        bottom: 0;
+        left: 0;
+      }
     }
 
     &.active {
@@ -41,15 +89,37 @@
 
       &::after {
         width: 150px;
+
+        @include tablet {
+          width: 100px;
+        }
+
+        @include small-tablet {
+          width: 100%;
+        }
       }
     }
 
     &:not(:last-of-type) {
       margin-bottom: 45px;
+
+      @include small-tablet {
+        margin-bottom: 0;
+      }
+
+      @include tablet {
+        margin-bottom: 30px;
+
+      }
+
     }
 
     &:last-of-type {
       margin-bottom: 60px;
+
+      @include small-tablet {
+        margin-bottom: 0;
+      }
     }
 
     @include hover {
@@ -64,6 +134,10 @@
     img {
       width: 100%;
       height: auto;
+    }
+
+    @include small-tablet {
+      display: none;
     }
   }
 

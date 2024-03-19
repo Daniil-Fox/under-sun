@@ -1,6 +1,10 @@
 .work {
   padding: 60px 0;
 
+  @include tablet {
+    padding-bottom: 0;
+  }
+
   &__header {
     display: flex;
     flex-direction: column;

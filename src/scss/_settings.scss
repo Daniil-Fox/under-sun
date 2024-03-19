@@ -123,6 +123,10 @@ a {
   position: relative;
   z-index: 3;
 
+  @include tablet {
+    font-size: 48px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -136,6 +140,12 @@ a {
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
+
+    @include tablet {
+      width: 70px;
+      height: 70px;
+      top: -12px;
+    }
   }
 }
 

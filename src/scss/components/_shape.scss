@@ -7,12 +7,22 @@
   padding-bottom: 154px;
   margin-bottom: 60px;
 
+  @include tablet {
+    padding-left: 150px;
+    padding-bottom: 75px;
+    max-height: 500px;
+    margin-bottom: 20px;
+  }
+
+  @include small-tablet {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
   &__img {
     &--main {
       border-radius: 0 80px 0 0;
       overflow: hidden;
-
-
     }
 
     &--arc {
@@ -22,6 +32,10 @@
       bottom: 0;
       width: 307px;
       max-height: 385px;
+
+      @include tablet {
+        width: 250px;
+      }
 
       &::after {
         content: "";

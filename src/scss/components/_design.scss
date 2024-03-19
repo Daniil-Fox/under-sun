@@ -3,6 +3,10 @@
   padding-top: 60px;
   position: relative;
 
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
+
   &__line {
     position: absolute;
     width: 120%;
@@ -49,6 +53,10 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
 
@@ -66,6 +74,13 @@
     overflow: hidden;
     display: inline-block;
 
+    @include small-tablet {
+      margin: 0 auto;
+      margin-bottom: 30px;
+      // height: 340px;
+      width: 70%;
+    }
+
     img {
       height: 100%;
       width: auto;
@@ -77,6 +92,15 @@
       margin-bottom: 0;
       border-radius: 80px 0 0 0;
       align-self: flex-end;
+
+      @include small-tablet {
+        height: unset;
+        margin-bottom: 20px;
+
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -88,6 +112,10 @@
   flex-direction: column;
   align-items: flex-start;
 
+  @include small-tablet {
+    padding-left: 0;
+  }
+
   &__image {
     overflow: hidden;
 
@@ -96,12 +124,34 @@
       height: 650px;
       border-radius: 150px 0 0 0;
       margin-bottom: 96px;
+
+      @include small-tablet {
+        height: auto;
+        width: 70%;
+        height: 400px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: bottom;
+        }
+      }
     }
 
     &--small {
       height: 480px;
       align-self: flex-end;
       margin-bottom: 87px;
+
+      @include small-tablet {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
     }
 
     img {
@@ -114,6 +164,14 @@
   &__content {
     padding-left: 112px;
 
+    @include tablet {
+      padding-left: 50px;
+    }
+
+    @include small-tablet {
+      margin: 0 auto;
+      padding-left: 0;
+    }
   }
 
   &__title {
