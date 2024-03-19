@@ -3,6 +3,7 @@
   padding-bottom: 30px;
   margin-bottom: 120px;
   position: relative;
+  z-index: 3;
 
   @include tablet {
     padding-top: 10px;
@@ -13,6 +14,7 @@
   &:before {
     content: "";
     position: absolute;
+    z-index: -1;
     left: 0;
     top: -100px;
     width: 230px;
@@ -26,6 +28,7 @@
   &::after {
     content: "";
     position: absolute;
+    z-index: -1;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -64,6 +67,10 @@
       font-size: 18px;
       margin-bottom: 15px;
     }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__container {
@@ -76,6 +83,11 @@
       align-items: flex-start;
       gap: 50px 20px;
     }
+
+    @include mobile {
+      // grid-template-columns: 1fr;
+      // gap: 40px;
+    }
   }
 
   &__left {
@@ -86,6 +98,10 @@
       grid-column: 1 span;
       padding-top: 0;
       height: 350px;
+    }
+
+    @include mobile {
+      height: 200px;
     }
   }
 
@@ -100,6 +116,10 @@
       grid-column: 1 span;
       margin-left: unset;
       height: 350px;
+    }
+
+    @include mobile {
+      height: 200px;
     }
   }
 
@@ -149,6 +169,14 @@
         justify-content: flex-start;
       }
     }
+
+
+    img {
+      @include small-tablet {
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
 
   &__content {
@@ -160,6 +188,10 @@
       grid-column: 2 span;
       order: -1;
       text-align: center;
+    }
+
+    @include mobile {
+      // grid-column: 1 span;
     }
   }
 
@@ -176,6 +208,10 @@
       margin: 0 auto;
       width: 140px;
     }
+
+    @include mobile {
+      width: 130px;
+    }
   }
 
   &__desc {
@@ -190,6 +226,10 @@
       font-size: 72px;
       margin-bottom: 5px;
     }
+
+    @include mobile {
+      font-size: 52px;
+    }
   }
 
   &__discount {
@@ -198,6 +238,10 @@
     font-weight: 300;
     font-size: 18px;
     color: #000;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__btn {
@@ -220,6 +264,11 @@
       width: 100px;
       height: 100px;
       padding: 5px;
+    }
+
+    @include mobile {
+      width: 90px;
+      height: 90px;
     }
 
     &::before {
