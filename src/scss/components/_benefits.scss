@@ -59,8 +59,8 @@
 
     @include mobile {
       max-width: 100%;
-      padding-bottom: 30px;
-      padding-left: 120px;
+      padding-bottom: 50px;
+      padding-left: 165px;
     }
   }
 
@@ -105,6 +105,12 @@
         height: 100%;
         border-radius: 200px 210px 0 0;
         background-color: #f9f3de;
+
+        @include mobile {
+          bottom: 7px;
+          left: 7px;
+
+        }
       }
 
       img {
