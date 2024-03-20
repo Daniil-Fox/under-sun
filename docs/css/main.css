@@ -277,6 +277,14 @@ a {
   opacity: 1;
 }
 
+[data-aos=custom-opacity] {
+  opacity: 0;
+}
+
+[data-aos=custom-opacity].aos-animate {
+  opacity: 1;
+}
+
 .ymaps3x0--main-engine-container {
   filter: grayscale(1);
   -ms-filter: grayscale(1);
@@ -747,7 +755,68 @@ a {
   border-radius: 100%;
   background-color: #f9f3de;
 }
+@media (any-hover: hover) {
+  .hero__btn:hover {
+    -webkit-animation: pulsColor 2s ease-out infinite;
+    animation: pulsColor 2s ease-out infinite;
+  }
+  .hero__btn:hover::before {
+    -webkit-animation: puls 2s ease-out infinite;
+    animation: puls 2s ease-out infinite;
+  }
+}
 
+@-webkit-keyframes puls {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(1.05);
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes puls {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(1.05);
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@-webkit-keyframes pulsColor {
+  0% {
+    background-color: #75d5c8;
+  }
+  50% {
+    background-color: #73eada;
+  }
+  100% {
+    background-color: #75d5c8;
+  }
+}
+@keyframes pulsColor {
+  0% {
+    background-color: #75d5c8;
+  }
+  50% {
+    background-color: #73eada;
+  }
+  100% {
+    background-color: #75d5c8;
+  }
+}
 .about {
   margin-bottom: 60px;
   position: relative;

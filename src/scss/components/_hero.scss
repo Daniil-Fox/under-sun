@@ -302,6 +302,47 @@
       border: 1px solid #505050;
       border-radius: 100%;
       background-color: #f9f3de;
+
+
     }
+
+    @include hover {
+      animation: pulsColor 2s ease-out infinite;
+
+      &::before {
+        animation: puls 2s ease-out infinite;
+      }
+    }
+  }
+}
+
+@keyframes puls {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+
+  }
+}
+
+@keyframes pulsColor {
+  0% {
+    background-color: #75d5c8;
+  }
+
+  50% {
+    background-color: #73eada;
+  }
+
+  100% {
+    background-color: #75d5c8;
   }
 }

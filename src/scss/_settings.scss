@@ -215,6 +215,15 @@ a {
   opacity: 1;
 }
 
+[data-aos="custom-opacity"] {
+  opacity: 0;
+}
+
+[data-aos="custom-opacity"].aos-animate {
+  opacity: 1;
+}
+
+
 
 .ymaps3x0--main-engine-container {
   filter: grayscale(1);
