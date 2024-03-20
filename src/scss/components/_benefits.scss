@@ -18,7 +18,11 @@
     height: auto;
     top: 34%;
     right: -10%;
-    transform: rotate(214deg) rotateX(180deg);
+    transform: rotate(220deg) rotateX(180deg);
+
+    @media (min-width: 1920px) {
+      transform: rotate(225deg) rotateX(180deg);
+    }
 
     img {
       width: 100%;

@@ -23,6 +23,11 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (min-width: 1920px) {
+      width: 22%;
+      height: 40vh;
+    }
   }
 
   &::after {
@@ -38,6 +43,11 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (min-width: 1920px) {
+      width: 22%;
+      height: 40vh;
+    }
   }
 
   &__line {
@@ -47,6 +57,10 @@
     top: 40%;
     left: -10%;
     transform: rotate(26deg);
+
+    @media (min-width: 1920px) {
+      transform: rotate(16deg);
+    }
 
     img {
       width: 100%;

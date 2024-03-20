@@ -277,6 +277,14 @@ a {
   opacity: 1;
 }
 
+.ymaps3x0--main-engine-container {
+  filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+}
+
 .header {
   padding: 25px 0;
   position: relative;
@@ -428,6 +436,12 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media (min-width: 1920px) {
+  .hero:before {
+    width: 22%;
+    height: 40vh;
+  }
+}
 .hero::after {
   content: "";
   position: absolute;
@@ -444,6 +458,12 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media (min-width: 1920px) {
+  .hero::after {
+    width: 22%;
+    height: 40vh;
+  }
+}
 .hero__line {
   position: absolute;
   width: 75%;
@@ -453,6 +473,13 @@ a {
   -webkit-transform: rotate(26deg);
   -ms-transform: rotate(26deg);
   transform: rotate(26deg);
+}
+@media (min-width: 1920px) {
+  .hero__line {
+    -webkit-transform: rotate(16deg);
+    -ms-transform: rotate(16deg);
+    transform: rotate(16deg);
+  }
 }
 .hero__line img {
   width: 100%;
@@ -760,6 +787,13 @@ a {
     height: 400px;
   }
 }
+@media (min-width: 1920px) {
+  .about:before {
+    width: 15%;
+    height: 44vh;
+    top: 0;
+  }
+}
 .about__container {
   display: -ms-grid;
   display: grid;
@@ -881,8 +915,14 @@ a {
   height: auto;
   top: 34%;
   right: -10%;
-  -webkit-transform: rotate(214deg) rotateX(180deg);
-  transform: rotate(214deg) rotateX(180deg);
+  -webkit-transform: rotate(220deg) rotateX(180deg);
+  transform: rotate(220deg) rotateX(180deg);
+}
+@media (min-width: 1920px) {
+  .benefits__line {
+    -webkit-transform: rotate(225deg) rotateX(180deg);
+    transform: rotate(225deg) rotateX(180deg);
+  }
 }
 .benefits__line img {
   width: 100%;
@@ -989,6 +1029,12 @@ a {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media (min-width: 1920px) {
+  .services:before {
+    width: 15%;
+    height: 60vh;
+  }
 }
 .services__header {
   display: -webkit-box;
@@ -1450,6 +1496,12 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media (min-width: 1920px) {
+  .design:before {
+    width: 15%;
+    height: 60vh;
+  }
+}
 .design__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1802,6 +1854,8 @@ a {
   }
 }
 .map__content {
+  position: relative;
+  z-index: 4;
   padding: 50px 40px 60px;
   background-color: #fff;
   border-radius: 0 150px 0 0;
