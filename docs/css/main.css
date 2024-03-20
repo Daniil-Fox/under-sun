@@ -404,14 +404,14 @@ a {
 .hero {
   padding-top: 35px;
   padding-bottom: 30px;
-  margin-bottom: 120px;
+  margin-bottom: 30px;
   position: relative;
   z-index: 3;
 }
 @media (max-width: 1024px) {
   .hero {
     padding-top: 10px;
-    margin-bottom: 80px;
+    margin-bottom: 0;
     padding-bottom: 0;
   }
 }
@@ -725,10 +725,12 @@ a {
   margin-bottom: 60px;
   position: relative;
   z-index: 1;
+  padding-top: 120px;
 }
 @media (max-width: 1024px) {
   .about {
     margin-bottom: 40px;
+    padding-top: 80px;
   }
 }
 .about__title {
@@ -858,13 +860,7 @@ a {
 }
 
 .benefits {
-  margin-bottom: 60px;
   position: relative;
-}
-@media (max-width: 576px) {
-  .benefits {
-    margin-bottom: 0;
-  }
 }
 .benefits__container {
   display: -ms-grid;
@@ -923,6 +919,8 @@ a {
 @media (max-width: 576px) {
   .benefits__images {
     max-width: 100%;
+    padding-bottom: 30px;
+    padding-left: 120px;
   }
 }
 .benefits__img img {
@@ -940,50 +938,44 @@ a {
 }
 .benefits__img--sec {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   left: 0;
   bottom: 0;
-  max-width: 307px;
-  height: 384px;
-  max-height: 100%;
+  width: 307px;
+  max-height: 385px;
 }
 @media (max-width: 1024px) {
   .benefits__img--sec {
-    height: 320px;
+    width: 250px;
   }
 }
 @media (max-width: 576px) {
   .benefits__img--sec {
-    height: unset;
     width: 50%;
   }
 }
-.benefits__img--sec img {
-  border-radius: 200px 200px 0 0;
-  height: 100%;
-  width: auto;
-}
-.benefits__img--sec::before {
+.benefits__img--sec::after {
   content: "";
   position: absolute;
+  left: 13px;
+  bottom: 13px;
   z-index: -1;
-  right: -13px;
-  top: -13px;
   width: 100%;
   height: 100%;
   border-radius: 200px 210px 0 0;
   background-color: #f9f3de;
 }
+.benefits__img--sec img {
+  border-radius: 200px 200px 0 0;
+}
 
 .services {
-  padding-top: 90px;
-  padding-bottom: 60px;
+  padding-top: 120px;
   position: relative;
 }
 @media (max-width: 1024px) {
   .services {
-    padding-top: 60px;
-    padding-bottom: 0;
+    padding-top: 80px;
   }
 }
 .services:before {
@@ -1323,16 +1315,13 @@ a {
 }
 
 .work {
-  padding: 60px 0;
+  padding: 20px 0;
+  padding-top: 120px;
 }
 @media (max-width: 1024px) {
   .work {
+    padding-top: 80px;
     padding-bottom: 0;
-  }
-}
-@media (max-width: 576px) {
-  .work {
-    padding-top: 40px;
   }
 }
 .work__header {
@@ -1426,12 +1415,13 @@ a {
 
 .design {
   margin-bottom: 120px;
-  padding-top: 60px;
+  padding-top: 120px;
   position: relative;
 }
 @media (max-width: 768px) {
   .design {
     margin-bottom: 60px;
+    padding-top: 80px;
   }
 }
 .design__line {

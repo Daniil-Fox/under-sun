@@ -1,10 +1,11 @@
 .design {
   margin-bottom: 120px;
-  padding-top: 60px;
+  padding-top: 120px;
   position: relative;
 
   @include small-tablet {
     margin-bottom: 60px;
+    padding-top: 80px;
   }
 
   &__line {

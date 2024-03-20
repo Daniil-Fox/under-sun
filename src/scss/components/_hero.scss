@@ -1,13 +1,13 @@
 .hero {
   padding-top: 35px;
   padding-bottom: 30px;
-  margin-bottom: 120px;
+  margin-bottom: 30px;
   position: relative;
   z-index: 3;
 
   @include tablet {
     padding-top: 10px;
-    margin-bottom: 80px;
+    margin-bottom: 0;
     padding-bottom: 0;
   }
 

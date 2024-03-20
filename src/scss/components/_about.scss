@@ -2,9 +2,11 @@
   margin-bottom: 60px;
   position: relative;
   z-index: 1;
+  padding-top: 120px;
 
   @include tablet {
     margin-bottom: 40px;
+    padding-top: 80px;
   }
 
   &__title {

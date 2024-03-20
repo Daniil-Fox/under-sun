@@ -1,11 +1,9 @@
 .services {
-  padding-top: 90px;
-  padding-bottom: 60px;
+  padding-top: 120px;
   position: relative;
 
   @include tablet {
-    padding-top: 60px;
-    padding-bottom: 0;
+    padding-top: 80px;
   }
 
   &:before {

@@ -1,10 +1,5 @@
 .benefits {
-  margin-bottom: 60px;
   position: relative;
-
-  @include mobile {
-    margin-bottom: 0;
-  }
 
   &__container {
     display: grid;
@@ -60,6 +55,8 @@
 
     @include mobile {
       max-width: 100%;
+      padding-bottom: 30px;
+      padding-left: 120px;
     }
   }
 
@@ -80,40 +77,36 @@
     &--sec {
 
       position: absolute;
-      z-index: 2;
+      z-index: 4;
       left: 0;
       bottom: 0;
-      max-width: 307px;
-      height: 384px;
-      max-height: 100%;
+      width: 307px;
+      max-height: 385px;
 
       @include tablet {
-        height: 320px;
+        width: 250px;
       }
 
       @include mobile {
-        height: unset;
         width: 50%;
       }
 
-      img {
-        border-radius: 200px 200px 0 0;
-        height: 100%;
-        width: auto;
-      }
-
-
-      &::before {
+      &::after {
         content: "";
         position: absolute;
+        left: 13px;
+        bottom: 13px;
         z-index: -1;
-        right: -13px;
-        top: -13px;
         width: 100%;
         height: 100%;
         border-radius: 200px 210px 0 0;
         background-color: #f9f3de;
       }
+
+      img {
+        border-radius: 200px 200px 0 0;
+      }
+
     }
   }
 }
