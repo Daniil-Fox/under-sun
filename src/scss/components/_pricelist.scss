@@ -34,6 +34,10 @@
     @include small-tablet {
       font-size: 18px;
     }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__price {
@@ -53,6 +57,14 @@
     font-weight: 300;
     font-size: 20px;
     color: #000;
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
 

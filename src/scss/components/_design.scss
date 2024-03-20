@@ -40,6 +40,10 @@
     align-items: center;
 
     margin-bottom: 60px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
@@ -48,6 +52,11 @@
 
   &__desc {
     font-size: 18px;
+
+    @include mobile {
+      font-size: 16px;
+      text-align: center;
+    }
   }
 
   &__container {
@@ -77,8 +86,15 @@
     @include small-tablet {
       margin: 0 auto;
       margin-bottom: 30px;
-      // height: 340px;
       width: 70%;
+      height: auto;
+      border-radius: 0 0 80px 0;
+    }
+
+    @include mobile {
+      border-radius: 0 0 40px 0;
+      margin-bottom: 20px;
+      width: 100%;
     }
 
     img {
@@ -100,6 +116,10 @@
         img {
           width: 100%;
         }
+      }
+
+      @include mobile {
+        border-radius: 40px 0 0 0;
       }
     }
   }
@@ -139,6 +159,11 @@
           object-position: bottom;
         }
       }
+
+      @include mobile {
+        width: 100%;
+        border-radius: 0 50px 0 0;
+      }
     }
 
     &--small {
@@ -151,6 +176,11 @@
         height: auto;
         margin: 0 auto;
         margin-bottom: 30px;
+      }
+
+      @include mobile {
+        width: 100%;
+        border-radius: 0 0 0 40px;
       }
     }
 

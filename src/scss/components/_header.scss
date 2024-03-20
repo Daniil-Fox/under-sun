@@ -1,5 +1,16 @@
 .header {
   padding: 25px 0;
+  position: relative;
+  z-index: 100;
+
+  &.sticky {
+    background-color: rgba(#f9f3de, 0.5);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 
   @include tablet {
     padding: 20px 0;
@@ -9,6 +20,28 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &__nav {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include mobile {
+      display: block;
+
+      width: 32px;
+      height: 32px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 
   &__tel {

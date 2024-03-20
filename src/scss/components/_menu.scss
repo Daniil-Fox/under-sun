@@ -1,0 +1,52 @@
+.menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  inset: 0;
+  background-color: rgba(#000, 0.5);
+  backdrop-filter: blur(3px);
+  transform: translateX(-100%);
+
+  transition: transform .3s ease-out;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &__body {
+    padding: 30px var(--container-offset);
+    padding-top: 60px;
+    background-color: #f9f3de;
+    position: relative;
+    height: 100%;
+
+    background-image: url('./../img/leafs/02.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__close {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 15px;
+    height: 15px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__nav {
+    .nav__list {
+      flex-direction: column;
+    }
+
+    .nav__link {
+      font-size: 20px;
+    }
+  }
+}

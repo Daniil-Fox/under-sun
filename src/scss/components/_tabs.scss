@@ -15,7 +15,9 @@
 
     @include small-tablet {
       flex-direction: row;
-      gap: 30px;
+      gap: 15px 30px;
+      flex-wrap: wrap;
+      justify-content: center;
 
     }
   }
@@ -57,6 +59,10 @@
 
     @include small-tablet {
       font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 16px;
     }
 
     &::after {
@@ -103,14 +109,16 @@
     &:not(:last-of-type) {
       margin-bottom: 45px;
 
-      @include small-tablet {
-        margin-bottom: 0;
-      }
-
       @include tablet {
         margin-bottom: 30px;
 
       }
+
+      @include small-tablet {
+        margin-bottom: 0;
+      }
+
+
 
     }
 

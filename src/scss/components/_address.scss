@@ -11,6 +11,10 @@
     font-weight: 500;
     font-size: 20px;
     color: #000;
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
   &__desc {
@@ -19,5 +23,9 @@
     font-weight: 300;
     font-size: 20px;
     color: #000;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 }

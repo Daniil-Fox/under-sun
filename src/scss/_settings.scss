@@ -127,6 +127,10 @@ a {
     font-size: 48px;
   }
 
+  @include mobile {
+    font-size: 40px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -146,6 +150,11 @@ a {
       height: 70px;
       top: -12px;
     }
+
+    @include mobile {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 
@@ -154,6 +163,10 @@ a {
   font-weight: 300;
   font-size: 16px;
   color: #000;
+
+  @include mobile {
+    font-size: 14px;
+  }
 }
 
 .list {
@@ -167,6 +180,10 @@ a {
     font-weight: 300;
     font-size: 16px;
     color: #000;
+
+    @include mobile {
+      font-size: 14px;
+    }
 
     span {
       font-weight: 500;

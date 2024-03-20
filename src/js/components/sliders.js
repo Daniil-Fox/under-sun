@@ -13,5 +13,13 @@ new Swiper(".work__slider", {
   pagination: {
     el: '.work__pagination',
     type: "fraction",
+  },
+  breakpoints : {
+    320: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 4
+    }
   }
 })

@@ -130,6 +130,7 @@
 
     &--small {
       border-radius: 150px 0;
+      max-height: 360px;
 
       @include tablet {
         border-radius: 0;
@@ -176,6 +177,10 @@
         height: 100%;
         width: 100%;
       }
+    }
+
+    @include mobile {
+      height: 100% !important;
     }
   }
 
